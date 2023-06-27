@@ -24,9 +24,15 @@ const tamogotchi = {
         this.name = name;
     },
     Eat: function(){
+        let k = 0;
+        if (k >= 5){
+            this.meal++;
+            k = 0;
+        }
         if (this.meal < 5){
             this.meal++;
             this.mood--;
+            k++;
         }
     },
     Sleep: function(){
